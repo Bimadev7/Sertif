@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verifikasi Sertifikat TOEFL ITP</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        header {
+            background-color: #00539f;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header .logo {
+            width: 120px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        header nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .verification-container {
+            width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 10px solid #ddd;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 26px;
+            margin: 0;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: calc(100% - 22px);
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .result {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        .result p {
+            margin: 10px 0;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="ETS Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="hasil.html">Hasil Tes</a></li>
+                <li><a href="verifikasi.html">Verifikasi Sertifikat</a></li>
+                <li><a href="petunjuk.html">Petunjuk</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="verification">
+            <div class="verification-container">
+                <h1>Verifikasi Sertifikat TOEFL ITP</h1>
+                <p>Masukkan nomor sertifikat Anda untuk memverifikasi keabsahannya:</p>
+                <input type="text" id="certificateNumber" placeholder="Masukkan nomor sertifikat">
+                <button onclick="verifyCertificate()">Verifikasi</button>
+                <div id="verificationResult" class="result"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Educational Testing Service. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function verifyCertificate() {
+            const certificateNumber = document.getElementById('certificateNumber').value;
+            const verificationResult = document.getElementById('verificationResult');
+
+            // Simulasi hasil (sesuaikan dengan backend di implementasi nyata)
+            if (certificateNumber === "03 29132:1303130727:317715") {
+                verificationResult.innerHTML = "<p>Sertifikat valid: ARIEF MAHESA BAHRI, Skor: 533, Tanggal Tes: 21 Agustus 2024.</p>";
+                verificationResult.style.color = "green";
+            } else {
+                verificationResult.innerHTML = "<p>Nomor sertifikat tidak valid. Silakan periksa kembali nomor yang Anda masukkan.</p>";
+                verificationResult.style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>
