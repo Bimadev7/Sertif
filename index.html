@@ -27,15 +27,20 @@
             margin: 0 auto;
         }
 
-        header nav ul {
-            list-style: none;
-            padding: 0;
+        header nav {
             margin: 10px 0 0;
         }
 
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
         header nav ul li {
-            display: inline;
-            margin: 0 15px;
+            display: inline-block;
+            margin: 0 10px;
         }
 
         header nav ul li a {
@@ -54,12 +59,14 @@
         }
 
         .result-container {
-            width: 800px;
+            width: 90%;
+            max-width: 800px;
             margin: 50px auto;
             padding: 20px;
             border: 10px solid #ddd;
             background-color: white;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
         }
 
         .result-container img {
@@ -127,21 +134,67 @@
             padding: 20px 0;
             margin-top: 20px;
         }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            header nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            .result-container {
+                width: 95%;
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            table {
+                font-size: 14px;
+            }
+
+            #downloadBtn {
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header .logo {
+                width: 100px;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+            table {
+                font-size: 12px;
+            }
+
+            #downloadBtn {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+
+            footer {
+                padding: 10px 0;
+            }
+        }
     </style>
 </head>
 <body>
-    <header>
-        <!-- <img src="logo.png" alt="ETS Logo" class="logo"> -->
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="hasil.html">Hasil Tes</a></li>
-                <li><a href="verifikasi.html">Verifikasi Sertifikat</a></li>
-                <li><a href="petunjuk.html">Petunjuk</a></li>
-                <li><a href="kontak.html">Kontak</a></li>
-            </ul>
-        </nav>
-    </header>
+   
 
     <main>
         <section class="result">
@@ -180,7 +233,7 @@
                 </table>
                 <p class="description">Tes TOEFL ITP (Test of English as a Foreign Language Institutional Testing Program) mengukur kemampuan bahasa Inggris Anda dalam konteks akademik dan profesional. Skor Anda menunjukkan tingkat kemampuan bahasa Inggris yang Anda capai dalam tes ini.</p>
                 <p>Diberikan di: JAKARTA</p>
-                <p>Pada: 21 Agustus 2024</p>
+                <p>Pada: 21 May 2024</p>
                 <p class="footer">ETS - Educational Testing Service</p>
 
                 <!-- Tombol Unduh PDF -->
@@ -191,11 +244,7 @@
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Educational Testing Service. All Rights Reserved.</p>
-        </div>
-    </footer>
+
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
