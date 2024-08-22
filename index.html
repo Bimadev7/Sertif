@@ -12,6 +12,7 @@
             padding: 0;
             background-color: #f7f7f7;
             color: #333;
+            line-height: 1.5;
         }
 
         header {
@@ -75,13 +76,13 @@
         }
 
         h1 {
-            font-size: 26px;
+            font-size: 2rem;
             margin: 0;
             font-weight: bold;
         }
 
-        p {
-            font-size: 18px;
+        p, table td.value, table td.label {
+            font-size: 1rem;
             margin: 10px 0;
         }
 
@@ -99,23 +100,23 @@
 
         .value {
             text-align: left;
-            font-size: 18px;
+            font-size: 1rem;
         }
 
         .description {
-            font-size: 16px;
+            font-size: 0.9rem;
             margin: 20px 0;
             color: #555;
         }
 
         .footer {
-            font-size: 16px;
+            font-size: 0.9rem;
             margin-top: 20px;
         }
 
         #downloadBtn {
             padding: 10px 20px;
-            font-size: 16px;
+            font-size: 1rem;
             background-color: #4CAF50;
             color: white;
             border: none;
@@ -148,20 +149,16 @@
             }
 
             h1 {
-                font-size: 22px;
+                font-size: 1.75rem;
             }
 
-            p {
-                font-size: 16px;
-            }
-
-            table {
-                font-size: 14px;
+            p, table td.value, table td.label {
+                font-size: 0.9rem;
             }
 
             #downloadBtn {
                 padding: 8px 16px;
-                font-size: 14px;
+                font-size: 0.9rem;
             }
         }
 
@@ -171,20 +168,16 @@
             }
 
             h1 {
-                font-size: 20px;
+                font-size: 1.5rem;
             }
 
-            p {
-                font-size: 14px;
-            }
-
-            table {
-                font-size: 12px;
+            p, table td.value, table td.label {
+                font-size: 0.8rem;
             }
 
             #downloadBtn {
                 padding: 6px 12px;
-                font-size: 12px;
+                font-size: 0.8rem;
             }
 
             footer {
@@ -194,8 +187,6 @@
     </style>
 </head>
 <body>
-   
-
     <main>
         <section class="result">
             <div class="result-container">
@@ -243,8 +234,6 @@
             </div>
         </section>
     </main>
-
-
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
